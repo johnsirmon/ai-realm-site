@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1621" />
+  <meta name="description" content="Explore a living fantasy atlas of AI. Follow evidence-backed signals, discover connections, and keep a personal field journal." />
+  <title>AI Realm — The Living Atlas</title>
+  <script type="module" crossorigin src="./assets/index-DePy7ro_.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DRxM7ZWS.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="realm" tabindex="-1" aria-describedby="walk-help walk-target" aria-label="3D AI Realm atlas. Use WASD to walk, Arrow keys to look, E to inspect, and Tab to pause. Use the landmark list for keyboard navigation."></canvas>
+  <p id="walk-help" class="sr-only">While walking, use W A S D to move, the Arrow keys to look, E to inspect the center target, Tab to pause and return to controls, and Escape to release the mouse.</p>
+  <p id="walk-target" class="sr-only"></p>
+  <header id="topbar" class="glass">
+    <div class="brand"><div class="eyebrow">THE LIVING ATLAS</div><h1>AI Realm<span> / Seven districts</span></h1></div>
+    <nav aria-label="Explore the realm">
+      <button id="atlas" class="active" type="button">Atlas <kbd>O</kbd></button>
+      <button id="enter" type="button">Walk the realm</button>
+      <button id="codex-toggle" type="button" aria-expanded="false" aria-controls="codex">Codex & seals <span id="journal-count">0</span></button>
+    </nav>
+  </header>
+  <aside id="signals" class="glass">
+    <div class="signal-heading"><div class="eyebrow">THE QUEST BOARD</div><button id="signals-toggle" type="button" aria-expanded="true" aria-controls="signal-list" aria-label="Collapse signals">−</button></div>
+    <div class="learner-crest"><span class="crest-mark" aria-hidden="true">✦</span><span><strong id="learner-title">Explorer</strong><small id="learner-xp">0 knowledge</small></span></div>
+    <h2>Follow what changed.</h2>
+    <p class="muted">Investigate a current signal. Prove what you understood. Keep the seal.</p>
+    <p id="freshness" class="source-meta"></p>
+    <div id="signal-list"></div>
+    <button id="start-expedition" class="primary" type="button">Begin recommended trial <span>→</span></button>
+    <p id="expedition-progress" class="source-meta" aria-live="polite">One trial is a complete learning session.</p>
+    <details id="model-ladder"><summary>Models by capability</summary><div id="model-list"></div><p class="source-meta">Creature size encodes this dated editorial capability composite only. It is not safety, adoption, momentum or evidence confidence.</p></details>
+    <details id="landmark-directory"><summary>All landmarks</summary><label class="sr-only" for="landmark-search">Find a technology</label><input id="landmark-search" type="search" placeholder="Find a technology…" /><div id="landmark-list"></div></details>
+    <details id="realm-legend"><summary>Districts and foundation</summary><div class="region-legend"><p><strong>Surface districts</strong></p><ul><li>Model Peaks</li><li>Agent Valley</li><li>Framework Foundries</li><li>Protocol Bridges</li><li>Capability Guilds</li><li>Memory Archives</li><li>Safety Citadel</li></ul><p class="muted">Foundation layer: compute, inference, deployment, storage and execution.</p></div></details>
+  </aside>
+  <div id="map-labels" aria-hidden="true"></div>
+  <aside id="detail" class="glass hidden" aria-label="Landmark discovery">
+    <button id="close-detail" class="close" type="button" aria-label="Close details">×</button>
+    <div id="detail-content"></div>
+  </aside>
+  <aside id="codex" class="glass hidden" aria-label="Codex and accomplishments">
+    <button id="close-codex" class="close" type="button" aria-label="Close codex">×</button>
+    <div class="eyebrow">CODEX & ACCOMPLISHMENTS</div><h2>What you can now explain.</h2>
+    <p class="muted">Seals record bounded checks against a dated evidence edition. Your explanations keep their history in this browser.</p>
+    <div id="codex-list"></div>
+  </aside>
+  <footer id="wayfinder" class="glass"><span class="compass" aria-hidden="true">✧</span><span id="status">Preparing the valley…</span><label class="quality-label"><span class="sr-only">Visual quality</span><select id="quality" aria-label="Visual quality"><option value="low">Low</option><option value="balanced" selected>Balanced</option><option value="high">High</option></select></label><button id="dusk-toggle" type="button" aria-pressed="true">Dusk</button><button id="tour-toggle" type="button" aria-pressed="false">Cinematic tour</button><button id="motion-toggle" type="button" aria-pressed="false">Pause world</button></footer>
+  <section id="tour-caption" class="glass hidden" aria-live="polite"><div class="eyebrow">A JOURNEY THROUGH AGENT VALLEY</div><h2 id="tour-name"></h2><p id="tour-metaphor"></p><button id="tour-inspect" type="button">Explore this discovery →</button></section>
+  <div id="crosshair" aria-hidden="true">+</div>
+  <div id="toast" class="glass hidden" role="status"></div>
+  <section id="graphics-notice" class="glass hidden" role="status" aria-label="Graphics status"></section>
+  <div id="loading" class="loading"><span class="eyebrow">AI REALM</span><p>Opening the atlas…</p></div>
+</div>
+</body>
+</html>
